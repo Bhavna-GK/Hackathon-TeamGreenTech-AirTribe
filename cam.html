@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CamAI</title>
+</head>
+
+<style>
+    h4 {
+        text-align: center;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        border: 3px solid green;
+    }
+
+    .three-inline-buttons .button {
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .button {
+        border-radius: 3px;
+        border-width: 1px;
+    }
+
+    .three-inline-buttons {
+        display: table;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+    <center>
+        <h2 display="center">CAM-AI</h2>
+    </center>
+    <center><video id="video" width="1000" height="600" autoplay></video></center>
+    <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+    <div class="three-inline-buttons">
+        <button id="capture" class="button">Capture</button>
+        <input type="file" class="button" id="savedImage" accept="image/*">
+        <button class="button" onclick="compareFaces()">Compare Faces</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script src="scam.js"></script>
+</body>
+
+</html>
